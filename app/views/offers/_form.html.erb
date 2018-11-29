@@ -1,31 +1,31 @@
-<%= form_for @offer do |f| %>
+<%= form_for @offer do |form| %>
 
 <div>
 
-<%= f.label :company_id, "What is the Company?" %>
- <%= f.collection_select :company_id, Company.all, :id, :name %>  
+<%= form.label :company_id, "What is the Company?" %>
+ <%= form.collection_select :company_id, Company.all, :id, :name %>  
 <br>
-<%= f.label :offer_Description, "Describe the Offer" %>
-<%= f.text_area :offer_Description%>
+<%= form.label :offer_Description, "Describe the Offer" %>
+<%= form.text_area :offer_Description%>
 <br>
-<%= f.label :start_Date, "Enter the Start date." %>
-<%= f.date_field :start_Date %>
+<%= form.label :start_Date, "Enter the Start date." %>
+<%= form.date_field :start_Date %>
 <br>
-<%= f.label :expired_Date, "Enter the expired date." %>
-<%= f.date_field :expired_Date %>
+<%= form.label :expired_Date, "Enter the expired date." %>
+<%= form.date_field :expired_Date %>
 <br>
-<%= f.label :image, "Instert the image of the offer." %>
-<%= f.text_field :image %>
+<%= form.label :image, "Instert the image of the offer." %>
+<%= form.text_field :image %>
 <br>
-<%= f.label :coLocation, "location." %>
-<%= f.text_field :coLocation %>
+<%= form.label :coLocation, "location." %>
+<%= form.text_field :coLocation %>
 <br>
-<%= f.label label :coupon, "coupon?" %>
-<%= f.check_boxes :coupon %>
+<%= form.label  :coupon, "coupon?" %>
+<%= form.check_box :coupon %>
 <br>
 </div>
 
 
-<%= f.submit "Add offer"  %>
+<%= form.submit "Add offer"  %>
 
 <% end %>
