@@ -12,3 +12,9 @@ categories = ["Entertainment", "Travel", "Resturant", "Fashion Retailers", "Heal
 categories.each do |c|
   Category.create(name: c)
 end
+
+#c1 = Company.create
+o1 = Offers.create({offer_Description: "25% discount on all sizes of Cinnapacks from Cinnabon for SAR 5 only. Valid at over 100 branches across KSA",
+start_Date:"2/3/2018", expired_Date:"5/3/2018", image:"app/assets/images/cinnabon.jpg", coLocation:"",
+view_Count:"",coupon:"",premium:"false", used:"false", company_id:"" })
+
