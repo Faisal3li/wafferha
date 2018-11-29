@@ -22,7 +22,7 @@ view_Count:"",coupon:"",premium:"false", used:"false", company_id:"" })
 =======
 Company.destroy_all
 com1 = Company.create(name: "Zara", description: "Zara SA is a Spanish fast fashion retailer.")
-com2 = Company.create(name: "Starbucks", description: "Coffeehouse chain. ")
+com2 = Company.create(name: "Starbucks", description: "Coffeehouse chain. ",image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKVRBOW2GV9RsnVgTJ176MqYAn1DB5Ur6041MtJGY5ELRAp8ZdgtF")
 com3 = Company.create(name: "Nino", description: "Nino Italian Restaurant")
 com4 = Company.create(name: "Jolt", description: "CoffeeShop")
 

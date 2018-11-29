@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-   root "pages#home"
+  root "pages#home"
   #root "offers#index"
   resources :companies, :offers, :users
   resources :categories, only: [:show]

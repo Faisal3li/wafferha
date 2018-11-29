@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_28_144005) do
+=======
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_11_29_072051) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_28_134423) do
+>>>>>>> 06b096bd51b745c65f5fc181ba54183113e1ebba
+>>>>>>> edf7fec2a732cbd4e2f77351e796c4fbb001164c
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +34,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_144005) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image"
   end
 
   create_table "offers", force: :cascade do |t|
@@ -57,6 +66,7 @@ ActiveRecord::Schema.define(version: 2018_11_28_144005) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_type"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
