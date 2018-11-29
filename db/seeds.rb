@@ -13,11 +13,16 @@ categories.each do |c|
   Category.create(name: c)
 end
 
+#c1 = Company.create
+o1 = Offer.create({offer_Description: "25% discount on all sizes of Cinnapacks from Cinnabon for SAR 5 only. Valid at over 100 branches across KSA",
+                   start_Date: "2/3/2018", expired_Date: "5/3/2018", image: "app/assets/images/cinnabon.jpg", coLocation: "",
+                   view_Count: "", coupon: "", premium: "false", used: "false", company_id: ""})
+
 Company.destroy_all
-com1 = Company.create(name: "Zara", description: "Zara SA is a Spanish fast fashion retailer.", image: "")
+com1 = Company.create(name: "Zara", description: "Zara SA is a Spanish fast fashion retailer.")
 com2 = Company.create(name: "Starbucks", description: "Coffeehouse chain. ", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKVRBOW2GV9RsnVgTJ176MqYAn1DB5Ur6041MtJGY5ELRAp8ZdgtF")
-com3 = Company.create(name: "Nino", description: "Nino Italian Restaurant", image: "")
-com4 = Company.create(name: "Jolt", description: "CoffeeShop", image: "")
+com3 = Company.create(name: "Nino", description: "Nino Italian Restaurant")
+com4 = Company.create(name: "Jolt", description: "CoffeeShop")
 
 Offer.destroy_all
 #c1 = Company.create
