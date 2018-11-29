@@ -12,7 +12,7 @@
   <body>
   <nav>
     <%= link_to("Offers", offers_path) %> 
-  <%= link_to( "Copuns", )%>
+  <%= link_to( "Copuns", offers_path)%>
   <%= link_to("All companies", companies_path) %>
   <%#= link_to( "log out", )%>
   </nav>
@@ -24,5 +24,6 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+
   </body>
 </html>
