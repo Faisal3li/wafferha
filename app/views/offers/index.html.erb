@@ -1,5 +1,6 @@
 
 <% @offers.each do |offer| %>
-<h3><%= offer.offer_Description %></h3>
+
+
 <%= link_to("Read more!", offer_path(offer)) %>
 <% end %>

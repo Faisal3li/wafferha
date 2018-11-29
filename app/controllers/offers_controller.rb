@@ -10,19 +10,15 @@ class OffersController < ApplicationController
   def edit
   end
 
-  def create
-    # company id
-    # category id
-    # company = Company.find_by(name: "a")
-  end
+
 
   def new
     @offer = Offer.new
   end
 
   def create
-    offer = Offers.create(offer_params)
-    redirect_to offer_path(offer)
+    @offer = Offer.new(offer_params)
+    redirect_to @offer
   end
 
   private
