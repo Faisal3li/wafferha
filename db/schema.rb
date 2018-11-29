@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_11_28_134423) do
+=======
+ActiveRecord::Schema.define(version: 2018_11_28_144005) do
+>>>>>>> c09d687d3e536ed3daf0a731f769f1aa6a5e99f6
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,6 +44,10 @@ ActiveRecord::Schema.define(version: 2018_11_28_134423) do
     t.boolean "used"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+<<<<<<< HEAD
+=======
+    t.integer "category_id"
+>>>>>>> c09d687d3e536ed3daf0a731f769f1aa6a5e99f6
     t.integer "company_id"
   end
 
