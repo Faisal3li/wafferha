@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-wafferha 
-=======
-wafferha
+# wafferha
 
-..
+Coolest project ever

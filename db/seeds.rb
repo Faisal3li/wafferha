@@ -25,6 +25,10 @@ com3 = Company.create(name: "Nino", description: "Nino Italian Restaurant")
 com4 = Company.create(name: "Jolt", description: "CoffeeShop")
 
 Offer.destroy_all
+#c1 = Company.create
+Offer.create({offer_Description: "25% discount on all sizes of Cinnapacks from Cinnabon for SAR 5 only. Valid at over 100 branches across KSA",
+              start_Date: "2/3/2018", expired_Date: "5/3/2018", image: "app/assets/images/cinnabon.jpg", coLocation: "",
+              view_Count: "", coupon: "", premium: "false", used: "false", company_id: ""})
 Offer.create(offer_Description: "buy one get one free ", expired_Date: "2018-11-28 14:23:21", start_Date: "2018-11-28 14:23:21", image: "http://fillmurray.com/200/200", coLocation: "Riyadh", view_Count: 2, coupon: "RA01", premium: false, used: false, category_id: 130, company_id: 104)
 # Offer.create(offer_Description: "70% ", expired_Date: "01-08-2018", start_Date: "28-09-2018", image: "http://fillmurray.com/400/400", coLocation: "Jeddah", view_Count: 8, coupon: "QW122", premium: false, used: false)
 # Offer.create(offer_Description: "30% ", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "http://fillmurray.com/200/200", coLocation: "Dammam", view_Count: 1, coupon: "CX233", premium: false, used: false)
