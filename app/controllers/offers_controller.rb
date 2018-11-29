@@ -17,11 +17,11 @@ class OffersController < ApplicationController
   end
 
   def new
-    @offers = Offer.new
+    @offer = Offer.new
   end
 
   def create
-    Offer = current_user.offers.create(offer_params)
+    offer = Offers.create(offer_params)
     redirect_to offer_path(offer)
   end
 
