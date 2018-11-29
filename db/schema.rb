@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 2018_11_28_134423) do
     t.boolean "used"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "category_id"
     t.integer "company_id"
+    t.integer "category_id"
   end
 
   create_table "offers_users", id: false, force: :cascade do |t|

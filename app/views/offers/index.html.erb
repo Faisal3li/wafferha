@@ -1,2 +1,5 @@
-<h2>Wafferha</h2>
-<p>Find me in app/views/offers/index.html.erb</p>
+
+<% @offers.each do |offer| %>
+<h3><%= offer.offer_Description %></h3>
+<%= link_to("Read more!", offer_path(offer)) %>
+<% end %>
