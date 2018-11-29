@@ -4,10 +4,11 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @company = Company.find_by(name: params[:name])
+    @company = Company.find_by(id: params[:id])
   end
 
   def new
+    
     @company = Company.new
   end
 
