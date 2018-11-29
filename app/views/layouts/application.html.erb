@@ -12,6 +12,7 @@
   <body>
   <%#= render partial: "pages/nav" %>
   <nav>
+<<<<<<< HEAD
 <%= link_to("Offers", offers_path) %> 
 <%= link_to( "Copuns", )%>
 
@@ -30,6 +31,13 @@
 <%= link_to "Sign Up", new_user_registration_path %>
 <% end%>
 </nav>
+=======
+    <%= link_to("Offers", offers_path) %> 
+  <%= link_to( "Copuns", )%>
+  <%= link_to("All companies", companies_path) %>
+  <%#= link_to( "log out", )%>
+  </nav>
+>>>>>>> ecfc6b59fb914230ad6143c5455e2d8c0486b55a
     <% if user_signed_in? %>
 <p>Stuff for logged in users</p>
 <% else %>
