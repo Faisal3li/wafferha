@@ -10,12 +10,34 @@
   </head>
 
   <body>
+  <%#= render partial: "pages/nav" %>
   <nav>
+<<<<<<< HEAD
+<%= link_to("Offers", offers_path) %> 
+<%= link_to( "Copuns", )%>
+
+
+
+
+<%= link_to("Add new Company",new_company_path) %>
+<%#= current_user.name%>
+
+
+<% if current_user  %>
+ <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+   <% else %>
+<%= link_to 'Log In', new_user_session_path %>
+
+<%= link_to "Sign Up", new_user_registration_path %>
+<% end%>
+</nav>
+=======
     <%= link_to("Offers", offers_path) %> 
   <%= link_to( "Copuns", offers_path)%>
   <%= link_to("All companies", companies_path) %>
   <%#= link_to( "log out", )%>
   </nav>
+>>>>>>> ecfc6b59fb914230ad6143c5455e2d8c0486b55a
     <% if user_signed_in? %>
 <p>Stuff for logged in users</p>
 <% else %>

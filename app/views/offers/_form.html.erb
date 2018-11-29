@@ -1,9 +1,8 @@
 <%= form_for @offer do |form| %>
-
+<% if user_signed_in? && current_user.admin_id%>
 <div>
-
-<%= form.label :company_id, "What is the Company?" %>
- <%= form.collection_select :company_id, Company.all, :id, :name %>  
+<%#= form.label :company_id, "What is the Company?" %>
+ <%#= form.collection_select :company_id, Company.all, :id, :name %>  
 <br>
 <%= form.label :offer_Description, "Describe the Offer" %>
 <%= form.text_area :offer_Description%>
@@ -27,5 +26,5 @@
 
 
 <%= form.submit "Add offer"  %>
-
+<% end%>
 <% end %>
