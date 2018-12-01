@@ -14,7 +14,6 @@
 
   <body>
   <%#= render partial: "pages/nav" %>
-<<<<<<< HEAD
   <nav>
 <%= link_to("Offers", offers_path) %> 
 <%= link_to( "Copuns", )%>
@@ -34,25 +33,6 @@
 <%= link_to "Sign Up", new_user_registration_path %>
 <% end%>
 </nav>
-=======
-<nav class="nav-extended yellow darken-1">
-    <div class="nav-wrapper">
-      <%= link_to("Wafferha", offers_path, class:"brand-logo oleo") %>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><%= link_to 'Log In', new_user_session_path %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-      </ul>
-    </div>
-    <div class="nav-content navbar-fixed center">
-      <ul class="tabs tabs-transparent yellow darken-1">
-        <li class="tab"><%= link_to("Offers", offers_path) %></li>
-        <li class="tab"><%= link_to( "Copuns", offers_path)%></li>
-        <li class="tab"><%= link_to("All companies", companies_path) %></li>
-      </ul>
-    </div>
-  </nav>
-
->>>>>>> ef9e3a71f5028ed6661a4606735bdddb77982368
     <% if user_signed_in? %>
 <p>Stuff for logged in users</p>
 <% else %>

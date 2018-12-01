@@ -61,3 +61,8 @@ nav .brand-logo {
   padding: 0;
   letter-spacing: 12px;
 }
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    position: relative;
+    opacity: 1;
+    pointer-events: none;
+}
