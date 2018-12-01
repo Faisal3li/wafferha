@@ -7,45 +7,67 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Jura:700|Megrim|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Jura:700|Megrim|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
   </head>
 
   <body>
   <%#= render partial: "pages/nav" %>
-  <nav>
-<<<<<<< HEAD
-<%= link_to("Offers", offers_path) %> 
-<%= link_to( "Copuns", )%>
-
-
-
-
-<%= link_to("Add new Company",new_company_path) %>
-<%#= current_user.name%>
-
-
-<% if current_user  %>
- <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-   <% else %>
-<%= link_to 'Log In', new_user_session_path %>
-
-<%= link_to "Sign Up", new_user_registration_path %>
-<% end%>
-</nav>
-=======
-    <%= link_to("Offers", offers_path) %> 
-  <%= link_to( "Copuns", offers_path)%>
-  <%= link_to("All companies", companies_path) %>
-  <%#= link_to( "log out", )%>
+<nav class="nav-extended yellow darken-1">
+    <div class="nav-wrapper">
+      <%= link_to("Wafferha", offers_path, class:"brand-logo oleo") %>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      </ul>
+    </div>
+    <div class="nav-content navbar-fixed center">
+      <ul class="tabs tabs-transparent yellow darken-1">
+        <li class="tab"><%= link_to("Offers", offers_path) %></li>
+        <li class="tab"><%= link_to( "Copuns", offers_path)%></li>
+        <li class="tab"><%= link_to("All companies", companies_path) %></li>
+      </ul>
+    </div>
   </nav>
->>>>>>> ecfc6b59fb914230ad6143c5455e2d8c0486b55a
+
     <% if user_signed_in? %>
 <p>Stuff for logged in users</p>
 <% else %>
 <p>Stuff for logged out users</p>
 <% end %>
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
 
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class="page-footer grey darken-4 footer">
+      <div class="container">
+      <div class="row">
+      <div class="col l6 s12">
+      <h5 class="white-text rancho">About Us</h5>            
+      <br>
+      <i><p>WE ARE Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis ab expedita quisquam tenetur libero quaerat asperiores sapiente, tempore vero, iure illo nisi sunt quos beatae reiciendis consectetur sit? Maiores.</p></i>                
+      </div>
+      <div class="col l4 offset-l2 s12">
+      <h5 class="white-text rancho">How to find us</h5>
+      <ul>
+      <li>Our GitHub: </li>
+      </ul>
+      </div>
+      </div>
+    </div>
+    <div class="footer-copyright black">
+    <div class="container ranchofoot"> 
+    <p class="grey-text text-lighten-4 right paddingOnRight">Made with &hearts; in KSA </p> 
+    <p class="grey-text text-lighten-4 left paddingOnLeft">© 2018 Copyright Text </p> 
+    </div>
+    </div>
+  </footer> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
