@@ -1,3 +1,13 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@font-face {
+  src: url(app/assets/fonts/Pirou-Regular.otf);
+  font-family: pirou;
+}
+
 .navStyleFixed {
   display: flex;
   position: fixed;
@@ -5,13 +15,20 @@
   z-index: 1;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
 .jura {
   font-family: "Jura", sans-serif;
+}
+.amaranth {
+  font-family: 'Amaranth', sans-serif;
+}
+.kreon {
+  font-family: 'Kreon', serif;
+}
+.bree {
+  font-family: "Bree Serif", serif;
+}
+.modak {
+  font-family: "Modak", cursive;
 }
 .baloo {
   font-family: "Baloo", cursive;
@@ -37,29 +54,64 @@ div.container {
   margin-right: 20px;
 }
 .blackText {
-  color: black;
+  color: #16161d;
 }
 
 .tabs.tab a {
-  color: black;
+  color: #16161d;
 }
 /* nav.brand-logo {
-  color: black;
+  color: #16161d;
 } */
 nav ul a {
-  color: black;
+  color: #16161d;
 }
 
 .ranchofoot {
   font-family: "Rancho", cursive;
   font-size: 18px;
 }
+.brand-logo {
+  color: #16161d;
+}
 
-nav .brand-logo {
-  position: absolute;
-  color: red;
-  display: inline-block;
-  font-size: 2.1rem;
-  padding: 0;s
-  letter-spacing: 12px;
+.divJack {
+  background: #fdd835;
+  color: #16161d;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 5;
+  margin-top: 60px;
+}
+div.divJack a,
+div.divJack span {
+  color: #16161d;
+  background: #fdd835;
+  transition: all 0.3s;
+  flex-grow: 1;
+}
+div.divJack a:hover,
+div.divJack span:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #16161d;
+}
+
+.logoWafferha {
+  color: black;
+  font-size: 50px;
+  margin-left: 40%;
+  font-family: pirou;
+}
+.tabFontSize {
+  font-size: 20px;
+}
+
+.something {
 }
