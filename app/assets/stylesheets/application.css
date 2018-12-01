@@ -1,15 +1,65 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+.navStyleFixed {
+  display: flex;
+  position: fixed;
+  box-shadow: 0 0 10px #171d16;
+  z-index: 1;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.jura {
+  font-family: "Jura", sans-serif;
+}
+.baloo {
+  font-family: "Baloo", cursive;
+}
+.rancho {
+  font-family: "Rancho", cursive;
+}
+.megrim {
+  font-family: "Megrim", cursive;
+}
+.oleo {
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+
+div.container {
+  flex: 1 0 auto;
+}
+
+.paddingOnLeft {
+  margin-left: 20px;
+}
+.paddingOnRight {
+  margin-right: 20px;
+}
+.blackText {
+  color: black;
+}
+
+.tabs.tab a {
+  color: black;
+}
+/* nav.brand-logo {
+  color: black;
+} */
+nav ul a {
+  color: black;
+}
+
+.ranchofoot {
+  font-family: "Rancho", cursive;
+  font-size: 18px;
+}
+
+nav .brand-logo {
+  position: absolute;
+  color: red;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;s
+  letter-spacing: 12px;
+}
