@@ -43,9 +43,7 @@ div.container {
 .tabs.tab a {
   color: black;
 }
-/* nav.brand-logo {
-  color: black;
-} */
+
 nav ul a {
   color: black;
 }
@@ -57,9 +55,9 @@ nav ul a {
 
 nav .brand-logo {
   position: absolute;
-  color: red;
+  
   display: inline-block;
   font-size: 2.1rem;
-  padding: 0;s
+  padding: 0;
   letter-spacing: 12px;
 }
