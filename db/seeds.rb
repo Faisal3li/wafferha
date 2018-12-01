@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 Category.destroy_all
 categories = ["Entertainment", "Resturant", "Fashion Retailers", "Health Care"]
 
@@ -13,23 +5,19 @@ categories.each do |c|
   Category.create(name: c)
 end
 
-#c1 = Company.create
-o1 = Offer.create({offer_Description: "25% discount on all sizes of Cinnapacks from Cinnabon for SAR 5 only. Valid at over 100 branches across KSA",
-                   start_Date: "2/3/2018", expired_Date: "5/3/2018", image: "app/assets/images/cinnabon.jpg", coLocation: "",
-                   view_Count: "", coupon: "", premium: "false", used: "false", company_id: ""})
+entertaiment = Category.find_by(name: "Entertainment")
+resturant = Category.find_by(name: "Resturant")
+fashion = Category.find_by(name: "Fashion Retailers")
+health = Category.find_by(name: "Health Care")
 
 Company.destroy_all
-com1 = Company.create(name: "Zara", description: "Zara SA is a Spanish fast fashion retailer.")
-com2 = Company.create(name: "Starbucks", description: "Coffeehouse chain. ", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKVRBOW2GV9RsnVgTJ176MqYAn1DB5Ur6041MtJGY5ELRAp8ZdgtF")
-com3 = Company.create(name: "Nino", description: "Nino Italian Restaurant")
-com4 = Company.create(name: "Jolt", description: "CoffeeShop")
+com1 = Company.create(name: "Zara", description: "Zara SA is a Spanish fast fashion retailer.", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpKVRBOW2GV9RsnVgTJ176MqYAn1DB5Ur6041MtJGY5ELRAp8ZdgtF")
+com2 = Company.create(name: "Starbucks", description: "Coffeehouse chain. ", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdwqNuHi3ZO9Suos68vXFXRpinUcs6v7A2HHWfib3HULVvpRz-jA")
+com3 = Company.create(name: "Buffalo Wings", description: "Buffalo Wings Restaurant", image: "https://www.cincinnatiburgerweek.com/wp-content/uploads/2018/04/buffalo-wings-rings.jpg")
+com4 = Company.create(name: "Jolt", description: "CoffeeShop", image: "https://scontent-mrs1-1.cdninstagram.com/vp/9698a0274a2edb61400a21edccb3ac59/5CAE0DA8/t51.2885-19/s320x320/33021638_182051442505382_6460066833968922624_n.jpg")
 
 Offer.destroy_all
-#c1 = Company.create
-Offer.create({offer_Description: "25% discount on all sizes of Cinnapacks from Cinnabon for SAR 5 only. Valid at over 100 branches across KSA",
-              start_Date: "2/3/2018", expired_Date: "5/3/2018", image: "app/assets/images/cinnabon.jpg", coLocation: "",
-              view_Count: "", coupon: "", premium: "false", used: "false", company_id: ""})
-Offer.create(offer_Description: "buy one get one free ", expired_Date: "2018-11-28 14:23:21", start_Date: "2018-11-28 14:23:21", image: "http://fillmurray.com/200/200", coLocation: "Riyadh", view_Count: 2, coupon: "RA01", premium: false, used: false, category_id: 130, company_id: 104)
-# Offer.create(offer_Description: "70% ", expired_Date: "01-08-2018", start_Date: "28-09-2018", image: "http://fillmurray.com/400/400", coLocation: "Jeddah", view_Count: 8, coupon: "QW122", premium: false, used: false)
-# Offer.create(offer_Description: "30% ", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "http://fillmurray.com/200/200", coLocation: "Dammam", view_Count: 1, coupon: "CX233", premium: false, used: false)
-# Offer.create(offer_Description: "buy 2 get one free", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "http://fillmurray.com/200/200", coLocation: "Riyadh", view_Count: 1, coupon: "CX233", premium: false, used: false)
+Offer.create(offer_Description: "buy 2 get one free", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "http://januaryskyy.com/wp-content/uploads/Zara-Sale1.jpg", coLocation: "Riyadh", view_Count: 1, coupon: "blah", used: false, category_id: entertaiment.id, company_id: com1.id)
+Offer.create(offer_Description: "Buy One Frappuccino Get 2 free ", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "http://afindemes.republica.com/files/2011/07/starbucks-happyhour.jpg", coLocation: "Jeddah", view_Count: 1, coupon: "blah", used: false, category_id: resturant.id, company_id: com2.id)
+Offer.create(offer_Description: "Get One of these meals with any main desh  ", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "https://cdn.cobone.com/deals/sau/71824/MAIN.jpg?v=14", coLocation: "Dammam", view_Count: 1, coupon: "blah", used: false, category_id: resturant.id, company_id: com3.id)
+Offer.create(offer_Description: "Buy One get one free", expired_Date: "20-08-2018", start_Date: "20-08-2018", image: "https://media-cdn.tripadvisor.com/media/photo-s/12/36/7e/b6/photo0jpg.jpg", coLocation: "Riyadh", view_Count: 1, coupon: "blah", used: false, category_id: resturant.id, company_id: com4.id)

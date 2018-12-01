@@ -60,9 +60,13 @@ div.container {
 .tabs.tab a {
   color: #16161d;
 }
+<<<<<<< HEAD
 /* nav.brand-logo {
   color: #16161d;
 } */
+=======
+
+>>>>>>> 35bb958b5524ebee04d2b10543a5497d1cd3d7d7
 nav ul a {
   color: #16161d;
 }
@@ -113,5 +117,15 @@ div.divJack span:hover {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 .something {
+=======
+nav .brand-logo {
+  position: absolute;
+  
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+  letter-spacing: 12px;
+>>>>>>> 35bb958b5524ebee04d2b10543a5497d1cd3d7d7
 }

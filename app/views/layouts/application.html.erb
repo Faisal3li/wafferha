@@ -16,6 +16,27 @@
 
   <body>
   <%#= render partial: "pages/nav" %>
+<<<<<<< HEAD
+  <nav>
+<%= link_to("Offers", offers_path) %> 
+<%= link_to( "Copuns", )%>
+
+
+
+
+<%= link_to("Add new Company",new_company_path) %>
+<%#= current_user.name%>
+
+
+<% if current_user  %>
+ <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+   <% else %>
+<%= link_to 'Log In', new_user_session_path %>
+
+<%= link_to "Sign Up", new_user_registration_path %>
+<% end%>
+</nav>
+=======
 <nav class="nav-extended yellow darken-1">
     <div class="nav-wrapper">
       <%= link_to("Wafferha", offers_path, class:"logoWafferha") %>
@@ -31,6 +52,7 @@
     </div>
   </nav>
 
+>>>>>>> ef9e3a71f5028ed6661a4606735bdddb77982368
     <% if user_signed_in? %>
 <p>Stuff for logged in users</p>
 <% else %>
