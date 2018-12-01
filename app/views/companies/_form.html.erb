@@ -1,20 +1,21 @@
+<% if current_user && current_user.admin%>
 <%= form_for @company do |f| %>
-    <div class="field container">
-        <%= f.label :name %>    
+    <div>
+        <%= f.label :name%>    
         <%= f.text_field :name, required: true %>
-    </div><br>
+    <br>
 
-    <div class="field container">
+    
         <%= f.label :description %>   
         <%= f.text_field :description, required: true %>
-    </div><br>
+    <br>
 
-    <div class="field container">
-        <%= f.label :image %>   
-        <%= f.select :image %>
-    </div><br>
+    
+        <%= f.label "Image" %>
+        <%= f.file_field :image %>
+    <br>
 
-    <div class="actions container"> 
+   
         <% if @company.id %>
             <%= f.submit "Edit Company" %>
         <% else %>
@@ -22,3 +23,4 @@
         <% end %>
     </div>
 <%end %>
+<% end%>

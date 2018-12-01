@@ -1,3 +1,6 @@
+User.destroy_all
+User.create(name: "admin", username: "admin", email: "admin@example.com", password: "123456", password_confirmation: "123456", admin: "true")
+
 Category.destroy_all
 categories = ["Entertainment", "Resturant", "Fashion Retailers", "Health Care"]
 

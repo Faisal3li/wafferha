@@ -7,14 +7,12 @@ body {
   src: url(app/assets/fonts/Pirou-Regular.otf);
   font-family: pirou;
 }
-
 .navStyleFixed {
   display: flex;
   position: fixed;
   box-shadow: 0 0 10px #171d16;
   z-index: 1;
 }
-
 .jura {
   font-family: "Jura", sans-serif;
 }
@@ -42,11 +40,9 @@ body {
 .oleo {
   font-family: "Oleo Script Swash Caps", cursive;
 }
-
 div.container {
   flex: 1 0 auto;
 }
-
 .paddingOnLeft {
   margin-left: 20px;
 }
@@ -56,21 +52,15 @@ div.container {
 .blackText {
   color: #16161d;
 }
-
 .tabs.tab a {
   color: #16161d;
 }
-<<<<<<< HEAD
 /* nav.brand-logo {
   color: #16161d;
 } */
-=======
-
->>>>>>> 35bb958b5524ebee04d2b10543a5497d1cd3d7d7
 nav ul a {
   color: #16161d;
 }
-
 .ranchofoot {
   font-family: "Rancho", cursive;
   font-size: 18px;
@@ -78,7 +68,6 @@ nav ul a {
 .brand-logo {
   color: #16161d;
 }
-
 .divJack {
   background: #fdd835;
   color: #16161d;
@@ -106,7 +95,6 @@ div.divJack span:hover {
   background: rgba(0, 0, 0, 0.1);
   color: #16161d;
 }
-
 .logoWafferha {
   color: black;
   font-size: 50px;
@@ -116,16 +104,5 @@ div.divJack span:hover {
 .tabFontSize {
   font-size: 20px;
 }
-
-<<<<<<< HEAD
 .something {
-=======
-nav .brand-logo {
-  position: absolute;
-  
-  display: inline-block;
-  font-size: 2.1rem;
-  padding: 0;
-  letter-spacing: 12px;
->>>>>>> 35bb958b5524ebee04d2b10543a5497d1cd3d7d7
 }

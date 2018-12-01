@@ -1,5 +1,5 @@
+<% if current_user && current_user.admin%>
 <%= form_for @offer do |form| %>
-<% if user_signed_in? && current_user.admin_id%>
 <div>
 <%#= form.label :company_id, "What is the Company?" %>
  <%#= form.collection_select :company_id, Company.all, :id, :name %>  
@@ -22,9 +22,9 @@
 <%= form.label  :coupon, "coupon?" %>
 <%= form.check_box :coupon %>
 <br>
+  <%= form.label "Image" %>
+  <%= form.file_field :image %>
 </div>
-
-
 <%= form.submit "Add offer"  %>
 <% end%>
 <% end %>
