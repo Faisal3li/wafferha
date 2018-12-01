@@ -1,4 +1,4 @@
-.navStyleFixed {
+/* .navStyleFixed {
   display: flex;
   position: fixed;
   box-shadow: 0 0 10px #171d16;
@@ -65,4 +65,4 @@ nav .brand-logo {
     position: relative;
     opacity: 1;
     pointer-events: none;
-}
+} */
