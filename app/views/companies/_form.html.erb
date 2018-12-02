@@ -1,26 +1,18 @@
 <% if current_user && current_user.admin%>
-<%= form_for @company do |f| %>
-    <div>
-        <%= f.label :name%>    
-        <%= f.text_field :name, required: true %>
-    <br>
-
-    
-        <%= f.label :description %>   
-        <%= f.text_field :description, required: true %>
-    <br>
-
-    
-        <%= f.label "Image" %>
-        <%= f.file_field :image %>
-    <br>
-
-   
-        <% if @company.id %>
-            <%= f.submit "Edit Company" %>
-        <% else %>
-            <%= f.submit "New Company" %>
-        <% end %>
-    </div>
-<%end %>
+<%= form_for @company do |form| %>
+ <div>
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+<%= form.label :description %>
+<%= form.text_area :description%>
+</div>
+<br>
+<div>
+  <%= form.label "Image" %>
+  <%= form.file_field :image %>
+</div>
+<%= form.submit "Add Company"  %>
 <% end%>
+<% end %>

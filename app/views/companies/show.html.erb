@@ -8,12 +8,11 @@
 <% if current_user && current_user.admin%>
 <p><%= link_to("Edit Company", edit_company_path(@company)) %></p>
 <p><%= link_to "Delete Company", company_path(@company), method: :delete %></p>
-<% end%>
 <%= link_to 'Add New Offer', "../offers/"+@company.id.to_s+"/new"%>
-
+<% end%>
 <h4></h4>
 <%# @compnay.offers.each do |co| %>
 <p><%# link_to co.name, company_path(co) %></p>
 <%# @a = @company.id %>
-
+<%= link_to 'Add New Offer', "/companies/#{@company.id}/offers/new" %>
 <%# end %>

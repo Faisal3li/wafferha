@@ -1,5 +1,6 @@
 <h1>Edit Company</h1>
 <% if current_user && current_user.admin%>
- <%= render partial: "users/form" %> 
+ <%= render partial: "form" %> 
 <%= link_to 'Edit', edit_company_path(@company) %>
+
 <% end%>
