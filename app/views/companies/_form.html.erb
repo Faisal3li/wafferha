@@ -13,6 +13,10 @@
   <%= form.label "Image" %>
   <%= form.file_field :image %>
 </div>
+<%= f.label :category_ids, "Choose a Catefory" %>
+</br>
+<%= f.collection_check_boxes :category_ids, Categoy.all, :id, :name%>
 <%= form.submit "Add Company"  %>
 <% end%>
+
 <% end %>

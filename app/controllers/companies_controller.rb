@@ -14,6 +14,7 @@ class CompaniesController < ApplicationController
 
   def create
     company = Company.create(company_params)
+    # raise "error"
     redirect_to companies_path
   end
 
