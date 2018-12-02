@@ -15,14 +15,14 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.new(offer_params)
+    @offer = Offer.create(offer_params)
     @offer.save
-    redirect_to @offer
+    redirect_to offers_path
   end
 
   private
 
   def offer_params
-    params.require(:offer).permit(:offer_Description, :expired_Date, :start_Date, :image, :coLocation ,:company_id)
+    params.require(:offer).permit(:offer_Description, :expired_Date, :start_Date, :image, :coLocation, :company_id)
   end
 end

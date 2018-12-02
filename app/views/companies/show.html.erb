@@ -14,5 +14,5 @@
 <%# @compnay.offers.each do |co| %>
 <p><%# link_to co.name, company_path(co) %></p>
 <%# @a = @company.id %>
-<%= link_to 'Add New', "../offers/"+@company.id.to_s+"/new"%>
+<%= link_to 'Add New Offer', "/companies/#{@company.id}/offers/new" %>
 <%# end %>
