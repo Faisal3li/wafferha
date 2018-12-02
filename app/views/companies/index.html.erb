@@ -1,14 +1,16 @@
 <h1>Index All Compnay</h1>
 <% @companies.each do |co| %>
+</br>
+<%= link_to co.name%>
+<%= co.name%>
  </br>
- <span> <%= link_to co.name, company_path(co)%> </span>
- <img src="<%= co.image %>">
-  </br>
- <%= co.name%> 
-  </br>
- <%= co.description %>
+<img src="<%= co.image %>">
  </br>
-
-
+<%= co.description %>
+</br>
 <% end %>
- <%= render partial: "form" %> 
+
+<% if current_user && current_user.admin%>
+
+<%= render partial: "form" %>
+ <% end %>

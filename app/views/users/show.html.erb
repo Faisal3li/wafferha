@@ -1,2 +1,6 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class="bree"><%= @user.email  %></h1>
+
+<% if user_signed_in? %>
+        <%= link_to "Edit Logged In User", edit_user_registration_path, class: "profile-btn btn yellow darken-1 z-depth-1" %>
+        <%= link_to 'Delete Account', user_registration_path, method: :delete, class: "profile-btn btn yellow darken-1 z-depth-1" %>
+        <% end %>

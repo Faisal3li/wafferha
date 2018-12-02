@@ -1,9 +1,10 @@
 <% if current_user && current_user.admin%>
 <%= form_for @offer do |form| %>
+<%# if user_signed_in? && current_user.admin_id%>
 <div>
-<%#= form.label :company_id, "What is the Company?" %>
- <%#= form.collection_select :company_id, Company.all, :id, :name %>  
-<br>
+
+    <%= hidden_field_tag "offer[company_id]", params[:id]%>
+
 <%= form.label :offer_Description, "Describe the Offer" %>
 <%= form.text_area :offer_Description%>
 <br>
@@ -13,9 +14,7 @@
 <%= form.label :expired_Date, "Enter the expired date." %>
 <%= form.date_field :expired_Date %>
 <br>
-<%= form.label :image, "Instert the image of the offer." %>
-<%= form.text_field :image %>
-<br>
+
 <%= form.label :coLocation, "location." %>
 <%= form.text_field :coLocation %>
 <br>

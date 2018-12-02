@@ -16,6 +16,9 @@ body {
 .jura {
   font-family: "Jura", sans-serif;
 }
+.noto {
+  font-family: 'Noto Sans TC', sans-serif;
+}
 .amaranth {
   font-family: "Amaranth", sans-serif;
 }
@@ -152,4 +155,9 @@ input:not(.browser-default):focus:not([readonly]) {
   border-bottom: 1px solid black !important;
   -webkit-box-shadow: 0 1px 0 0 black !important;
   box-shadow: 0 1px 0 0 black !important;
+}
+
+.githubFooter {
+  color: white;
+  padding-left: 10px;
 }
