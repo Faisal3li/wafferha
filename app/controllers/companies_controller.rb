@@ -1,5 +1,6 @@
 class CompaniesController < ApplicationController
   def index
+    @company = Company.new
     @companies = Company.all
   end
 
@@ -8,13 +9,12 @@ class CompaniesController < ApplicationController
   end
 
   def new
-    super
     @company = Company.new
   end
 
   def create
     company = Company.create(company_params)
-    redirect_to company_path(company)
+    redirect_to companies_path
   end
 
   def edit

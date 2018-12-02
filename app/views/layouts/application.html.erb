@@ -27,11 +27,14 @@
         <%= link_to("All Companies", companies_path) %>
     </div>
   </nav>
-    <% if user_signed_in? %>
-<p>Stuff for logged in users</p>
+<nav>
+<% if user_signed_in? %>
+  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
 <% else %>
-<p>Stuff for logged out users</p>
+  <%= link_to 'Log in', new_user_session_path %>
+  <%= link_to "Sign Up", new_user_registration_path %>
 <% end %>
+</nav>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <div class="container">

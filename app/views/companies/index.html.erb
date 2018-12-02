@@ -1,5 +1,3 @@
-
-<%= render partial: "form" %> 
 <h1>Index All Compnay</h1>
 <% @companies.each do |co| %>
 </br>
@@ -7,9 +5,11 @@
  </br>
 <img src="<%= co.image %>">
  </br>
-
-
 <%= co.description %>
 </br>
-
 <% end %>
+
+<% if current_user && current_user.admin%>
+<%= link_to 'Add New Company', "../companies/"+@company.id.to_s+"/new"%>
+
+ <% end %>
