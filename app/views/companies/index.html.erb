@@ -11,6 +11,5 @@
 <% end %>
 
 <% if current_user && current_user.admin%>
-
-<%= render partial: "form" %>
+<%= link_to 'Add New Company', "../companies/"+@company.id.to_s+"/new"%>
  <% end %>
