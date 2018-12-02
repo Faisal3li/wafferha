@@ -14,3 +14,13 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+function prepareNav() {
+  var elems = document.querySelectorAll(".pushpin");
+  var instances = M.Pushpin.init(elems, {
+    top: 64
+  });
+}
+
+document.addEventListener("DOMContentLoaded", prepareNav);
+document.addEventListener("turbolinks:load", prepareNav);

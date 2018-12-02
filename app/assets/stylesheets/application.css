@@ -17,10 +17,10 @@ body {
   font-family: "Jura", sans-serif;
 }
 .amaranth {
-  font-family: 'Amaranth', sans-serif;
+  font-family: "Amaranth", sans-serif;
 }
 .kreon {
-  font-family: 'Kreon', serif;
+  font-family: "Kreon", serif;
 }
 .bree {
   font-family: "Bree Serif", serif;
@@ -75,13 +75,13 @@ nav ul a {
   line-height: 80px;
   display: flex;
   text-align: center;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;
   box-shadow: 0 4px 2px -2px gray;
   z-index: 5;
-  margin-top: 60px;
+  /* margin-top: 60px; */
 }
 div.divJack a,
 div.divJack span {
@@ -105,4 +105,51 @@ div.divJack span:hover {
   font-size: 20px;
 }
 .something {
+}
+
+.pinned {
+  position: fixed !important;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.pin-top {
+  position: relative;
+}
+
+.pin-bottom {
+  position: relative;
+}
+
+.pinned {
+  position: fixed !important;
+}
+
+.btn {
+  color: black !important;
+  font-family: "Bree Serif", serif;
+  /* justify-content: space-between !important; */
+  margin: 10px;
+}
+
+.renderbtn {
+  display: flex;
+  /* margin: 5px; */
+}
+
+.juratab {
+  font-family: "Jura", sans-serif;
+  font-size: 15px;
+}
+
+.textWhite {
+  color: white !important;
+}
+input:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid black !important;
+  -webkit-box-shadow: 0 1px 0 0 black !important;
+  box-shadow: 0 1px 0 0 black !important;
 }

@@ -6,7 +6,7 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag 'Wafferha.png' %>
+    <%#= favicon_link_tag 'Wafferha.png' %>
     <link href="https://fonts.googleapis.com/css?family=Baloo|Jura:700|Megrim|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Amaranth|Baloo|Bree+Serif|Jura:700|Kreon|Megrim|Modak|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
@@ -14,14 +14,14 @@
   <body>
   <%#= render partial: "pages/nav" %>
 <nav class="nav-extended yellow darken-1">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper pin-bottom">
       <%= link_to("Wafferha", offers_path, class:"logoWafferha") %>
       <ul id="nav-mobile" class="right something">
         <li><%= link_to 'Log In', new_user_session_path, class: "amaranth  blackText tabFontSize" %></li>
         <li><%= link_to "Sign Up", new_user_registration_path, class: "amaranth  blackText tabFontSize" %></li>
       </ul>
     </div>
-    <div class="divJack bree tabFontSize">
+    <div class="divJack bree tabFontSize pushpin">
         <%= link_to("Offers", offers_path) %>
         <%= link_to( "Copuns", offers_path)%>
         <%= link_to("All Companies", companies_path) %>
