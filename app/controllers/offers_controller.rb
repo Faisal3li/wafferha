@@ -15,8 +15,10 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.create(offer_params)
-    @offer.save
+    offer = Offer.create(offer_params)
+
+    offer.save
+
     redirect_to offers_path
   end
 

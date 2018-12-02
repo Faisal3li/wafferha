@@ -20,7 +20,9 @@ class CompaniesController < ApplicationController
   end
 
   def create
-    company = Company.create(company_params)
+    company = Company.new(company_params)
+    company.category = Category.find(params["company"]["category_id"])
+    company.save
     redirect_to companies_path
   end
 
@@ -43,6 +45,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:name, :description, :image)
+    params.require(:company).permit(:name, :description, :image, :category_id => [])
   end
 end

@@ -5,6 +5,7 @@ ruby '2.5.3'
 
 gem 'devise'
 gem 'geocoder'
+
 gem 'cloudinary'
 gem 'rest-client', '~> 2.0'
 gem 'carrierwave'

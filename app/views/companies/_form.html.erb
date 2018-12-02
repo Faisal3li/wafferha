@@ -1,5 +1,6 @@
 <% if current_user && current_user.admin%>
 <%= form_for @company do |form| %>
+<%#= form.hidden_field :category_id, :value => category_id.id %>
  <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -8,11 +9,21 @@
 <%= form.label :description %>
 <%= form.text_area :description%>
 </div>
-<br>
+<br> 
 <div>
   <%= form.label "Image" %>
   <%= form.file_field :image %>
 </div>
+<%= form.label  "Choose a Category" %>
+</br>
+<%= form.collection_select :category_id, Category.all.collect, :id, :name, prompt: true %>
 <%= form.submit "Add Company"  %>
 <% end%>
+
 <% end %>
+
+<script>
+  window.onload = ()=>{
+      $('select').formSelect();
+  };
+</script>
