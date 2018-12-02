@@ -1,5 +1,6 @@
 <% if current_user && current_user.admin%>
 <%= form_for @company do |form| %>
+<%#= form.hidden_field :category_id, :value => category_id.id %>
  <div>
     <%= form.label :name %>
     <%= form.text_field :name %>
@@ -13,9 +14,9 @@
   <%= form.label "Image" %>
   <%= form.file_field :image %>
 </div>
-<%= f.label :category_ids, "Choose a Catefory" %>
+<%#= form.label  "Choose a Category" %>
 </br>
-<%= f.collection_check_boxes :category_ids, Categoy.all, :id, :name%>
+<%#= form.collection_select (:company, :category_id, Category.all, :id, :name) %>
 <%= form.submit "Add Company"  %>
 <% end%>
 

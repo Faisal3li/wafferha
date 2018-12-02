@@ -14,9 +14,7 @@
 <%= form.label :expired_Date, "Enter the expired date." %>
 <%= form.date_field :expired_Date %>
 <br>
-<%= form.label :image, "Instert the image of the offer." %>
-<%= form.text_field :image %>
-<br>
+
 <%= form.label :coLocation, "location." %>
 <%= form.text_field :coLocation %>
 <br>
@@ -27,5 +25,5 @@
   <%= form.file_field :image %>
 </div>
 <%= form.submit "Add offer"  %>
-<%# end%>
+<% end%>
 <% end %>

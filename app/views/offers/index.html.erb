@@ -2,9 +2,9 @@
 <%#= link_to("Read more!", offer_path(offer)) %>
 
 <% @offers.each do |offer| %>
-Name <%= link_to offer.offer_Description, offer_path(offer)%>
-<img  src="<%= offer.image %>"
- <p> <%#= link_to @offer.company.name, company_path(@ffer.company) %> </p>
+
+<%= offer.image %>
+ <p> <%= link_to offer.company.name, company_path(offer.company) %> </p>
 <% end %>
 <%#= link_to("Read more!", offer_path(offer)) %>
 ddddd
