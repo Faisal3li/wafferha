@@ -1,3 +1,0 @@
-# wafferha
-
-Coolest project ever

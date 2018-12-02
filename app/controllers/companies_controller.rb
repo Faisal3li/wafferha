@@ -1,6 +1,9 @@
 class CompaniesController < ApplicationController
   def index
     @companies = Company.all
+    # If a category has been chosen (through a drop down) - this uses something in params
+    # Find the category with the name was picked
+    # @companies is all of the companies that are associated with the category
   end
 
   def show
@@ -8,28 +11,35 @@ class CompaniesController < ApplicationController
   end
 
   def new
-    
     @company = Company.new
   end
 
   def create
-    @company = Company.new(company_params)
-    @company.admin_id = current_user.id
-    @comapny.save
-    reditect_to @company
+    company = current_user.companies.create(company_params)
+
+    redirect_to company_path(company)
   end
 
   def edit
-    @company = Company.find(id: params[:id])
+    @company = Company.find(params[:id])
+  end
+
+  def update
+    company = Company.find_by(id: params[:id])
+    Company.update(company_params)
+    redirect_to company_path(company)
   end
 
   def destroy
-    compnay = Company.find(params[:id])
+    company = Company.find(params[:id])
     company.destroy
     redirect_to companies_path
   end
 
+  def search
+  end
+
   def company_params
-    params.require(:company).permit(:name, :description)
+    params.require(:company).permit(:name, :description, :image)
   end
 end

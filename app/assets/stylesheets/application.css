@@ -1,15 +1,108 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+@font-face {
+  src: url(app/assets/fonts/Pirou-Regular.otf);
+  font-family: pirou;
+}
+.navStyleFixed {
+  display: flex;
+  position: fixed;
+  box-shadow: 0 0 10px #171d16;
+  z-index: 1;
+}
+.jura {
+  font-family: "Jura", sans-serif;
+}
+.amaranth {
+  font-family: 'Amaranth', sans-serif;
+}
+.kreon {
+  font-family: 'Kreon', serif;
+}
+.bree {
+  font-family: "Bree Serif", serif;
+}
+.modak {
+  font-family: "Modak", cursive;
+}
+.baloo {
+  font-family: "Baloo", cursive;
+}
+.rancho {
+  font-family: "Rancho", cursive;
+}
+.megrim {
+  font-family: "Megrim", cursive;
+}
+.oleo {
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+div.container {
+  flex: 1 0 auto;
+}
+.paddingOnLeft {
+  margin-left: 20px;
+}
+.paddingOnRight {
+  margin-right: 20px;
+}
+.blackText {
+  color: #16161d;
+}
+.tabs.tab a {
+  color: #16161d;
+}
+/* nav.brand-logo {
+  color: #16161d;
+} */
+nav ul a {
+  color: #16161d;
+}
+.ranchofoot {
+  font-family: "Rancho", cursive;
+  font-size: 18px;
+}
+.brand-logo {
+  color: #16161d;
+}
+.divJack {
+  background: #fdd835;
+  color: #16161d;
+  height: 80px;
+  line-height: 80px;
+  display: flex;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 4px 2px -2px gray;
+  z-index: 5;
+  margin-top: 60px;
+}
+div.divJack a,
+div.divJack span {
+  color: #16161d;
+  background: #fdd835;
+  transition: all 0.3s;
+  flex-grow: 1;
+}
+div.divJack a:hover,
+div.divJack span:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #16161d;
+}
+.logoWafferha {
+  color: black;
+  font-size: 50px;
+  margin-left: 40%;
+  font-family: pirou;
+}
+.tabFontSize {
+  font-size: 20px;
+}
+.something {
+}

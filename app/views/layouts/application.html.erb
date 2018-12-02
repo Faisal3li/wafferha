@@ -4,22 +4,28 @@
     <title>Wafferha</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'Wafferha.png' %>
+    <link href="https://fonts.googleapis.com/css?family=Baloo|Jura:700|Megrim|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Baloo|Bree+Serif|Jura:700|Kreon|Megrim|Modak|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
   </head>
-
   <body>
-  <nav>
-    <%= link_to("Offers", offers_path) %> 
-  <%= link_to( "Copuns", )%>
-  <select>
-  <option value="Entertainment">Entertainment</option>
-  <option value="Resturant">Resturant</option>
-  <option value="Fashion Retailers">Fashion Retailers</option>
-  <option value="Health Care">Health Care</option>
-</select>
-  <%#= link_to( "log out", )%>
+  <%#= render partial: "pages/nav" %>
+<nav class="nav-extended yellow darken-1">
+    <div class="nav-wrapper">
+      <%= link_to("Wafferha", offers_path, class:"logoWafferha") %>
+      <ul id="nav-mobile" class="right something">
+        <li><%= link_to 'Log In', new_user_session_path, class: "amaranth  blackText tabFontSize" %></li>
+        <li><%= link_to "Sign Up", new_user_registration_path, class: "amaranth  blackText tabFontSize" %></li>
+      </ul>
+    </div>
+    <div class="divJack bree tabFontSize">
+        <%= link_to("Offers", offers_path) %>
+        <%= link_to( "Copuns", offers_path)%>
+        <%= link_to("All Companies", companies_path) %>
+    </div>
   </nav>
     <% if user_signed_in? %>
 <p>Stuff for logged in users</p>
@@ -28,6 +34,34 @@
 <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <footer class="page-footer grey darken-4 footer">
+      <div class="container">
+      <div class="row">
+      <div class="col l6 s12">
+      <h5 class="white-text rancho">About Us</h5>            
+      <i><p>WE ARE Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis ab expedita quisquam tenetur libero quaerat asperiores sapiente, tempore vero, iure illo nisi sunt quos beatae reiciendis consectetur sit? Maiores.</p></i>                
+      </div>
+      <div class="col l4 offset-l2 s12">
+      <h5 class="white-text rancho">How to find us</h5>
+      <ul>
+      <li>Our GitHub: </li>
+      </ul>
+      </div>
+      </div>
+    </div>
+    <div class="footer-copyright black">
+    <div class="container ranchofoot"> 
+    <p class="grey-text text-lighten-4 right paddingOnRight">Made with &hearts; in KSA </p> 
+    <p class="grey-text text-lighten-4 left paddingOnLeft">© 2018 Copyright Text </p> 
+    </div>
+    </div>
+  </footer> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   </body>
 </html>
+
+
+
