@@ -1,8 +1,8 @@
 
-<h2> <%= @offer.company.name %> </h2>
-<h4><%= @offer.offer_Description %></h4>
-<p> <%= @offer.image %></p>
-<p> Offer starts: <%= @offer.start_Date %> Offer Expires: <%= @offer.expired_Date %></p>
+<h2 class="companyCard"> <%= @offer.company.name %> </h2>
+<h4 class="concertFont"><%= @offer.offer_Description %></h4>
+<%= @offer.image %>
+<p class="concertFont"> Offer starts: <%= @offer.start_Date %> Offer Expires: <%= @offer.expired_Date %></p>
 
 <% if current_user && current_user.admin%>
 <p><%= link_to("Edit Offer", edit_offer_path(@offer)) %></p>

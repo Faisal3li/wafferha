@@ -8,8 +8,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css?family=Amaranth|Baloo|Bree+Serif|Jura:700|Kreon|Megrim|Modak|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Baloo|Bree+Serif|Concert+One|Jura:700|Kreon|Megrim|Modak|Montserrat|Noto+Sans+TC|Oleo+Script+Swash+Caps|Patua+One|Rancho|Slabo+13px" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
@@ -21,19 +22,19 @@
       <%= link_to("Wafferha", offers_path, class:"logoWafferha") %>
       <ul id="nav-mobile" class="right">
       <% if !current_user.nil? %>
-      <li><%= link_to "Veiw Profile", user_path(current_user), class: "kreon  blackText tabFontSize"%></li>
-      <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "kreon  blackText tabFontSize" %></li>
+      <li><%= link_to "Veiw Profile", user_path(current_user), class: "patua  blackText tabFontSize"%></li>
+      <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "patua  blackText tabFontSize" %></li>
 
       <% else %>
-      <li><%= link_to "Log in", new_user_session_path, class: "kreon  blackText tabFontSize" %></li>
-      <li><%= link_to "Sign up", new_user_registration_path, class: "kreon  blackText tabFontSize" %></li>
+      <li><%= link_to "Log in", new_user_session_path, class: "patua  blackText tabFontSize" %></li>
+      <li><%= link_to "Sign up", new_user_registration_path, class: "patua  blackText tabFontSize" %></li>
 
       <% end %>
       </ul>
     </div>
-    <div class="divJack bree tabFontSize pushpin">
+    <div class="divJack monts tabFontSize pushpin">
         <%= link_to("Offers", offers_path) %>
-        <%= link_to( "Copuns", "/coupons")%>
+        <%= link_to( "Coupons", "/coupons")%>
         <%= link_to("All Companies", companies_path) %>
 
     <%= form_tag "/category_search", method: "GET", id: "form", class:"input-field dropMyStyle" do %>

@@ -16,6 +16,18 @@ body {
 .jura {
   font-family: "Jura", sans-serif;
 }
+.monts {
+  font-family: "Montserrat", sans-serif;
+}
+.patua {
+  font-family: "Patua One", cursive;
+}
+.concertFont {
+  font-family: "Concert One", cursive;
+}
+.slabo {
+  font-family: "Slabo 13px", serif;
+}
 .noto {
   font-family: "Noto Sans TC", sans-serif;
 }
@@ -168,7 +180,7 @@ input:not(.browser-default):focus:not([readonly]) {
   border-bottom: 2px solid black !important;
 }
 input {
-  font-family: "Bree Serif", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .select-wrapper input.select-dropdown {
@@ -177,4 +189,14 @@ input {
 [type="checkbox"]:checked + span:not(.lever):before {
   border-right: 2px solid #fdd835;
   border-bottom: 2px solid #fdd835;
+}
+
+.companyCard {
+  font-family: "Slabo 13px", serif;
+  color: black;
+  font-size: 50px;
+}
+.paraCard {
+  font-family: "Concert One", cursive;
+  font-size: 18px;
 }
