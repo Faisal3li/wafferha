@@ -17,7 +17,7 @@ body {
   font-family: "Jura", sans-serif;
 }
 .noto {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 .amaranth {
   font-family: "Amaranth", sans-serif;
@@ -107,7 +107,6 @@ div.divJack span:hover {
 .tabFontSize {
   font-size: 20px;
 }
-<<<<<<< HEAD
 .something {
 }
 
@@ -162,5 +161,20 @@ input:not(.browser-default):focus:not([readonly]) {
   color: white;
   padding-left: 10px;
 }
-=======
->>>>>>> 44bf3aa7ee0b0942e154e92c687e1ac659644442
+.dropMyStyle {
+  padding: 17px;
+}
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 2px solid black !important;
+}
+input {
+  font-family: "Bree Serif", serif;
+}
+
+.select-wrapper input.select-dropdown {
+  border-bottom: 2px solid black;
+}
+[type="checkbox"]:checked + span:not(.lever):before {
+  border-right: 2px solid #fdd835;
+  border-bottom: 2px solid #fdd835;
+}

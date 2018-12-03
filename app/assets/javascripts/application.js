@@ -24,3 +24,5 @@ function prepareNav() {
 
 document.addEventListener("DOMContentLoaded", prepareNav);
 document.addEventListener("turbolinks:load", prepareNav);
+
+
