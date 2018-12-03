@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'places/show'
   root "pages#home"
   #root "offers#index"
   get "/coupons", to: "offers#coupon"
