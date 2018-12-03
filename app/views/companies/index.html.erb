@@ -11,5 +11,5 @@
 <% end %>
 
 <% if user_signed_in?  && current_user.admin%>
-<%= link_to 'Add New Company', "../companies/"+@company.id.to_s+"/new"%>
+<%= link_to 'Add New Company', "/companies/new"%>
  <% end %>
