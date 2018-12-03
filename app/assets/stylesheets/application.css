@@ -16,8 +16,20 @@ body {
 .jura {
   font-family: "Jura", sans-serif;
 }
+.monts {
+  font-family: "Montserrat", sans-serif;
+}
+.patua {
+  font-family: "Patua One", cursive;
+}
+.concertFont {
+  font-family: "Concert One", cursive;
+}
+.slabo {
+  font-family: "Slabo 13px", serif;
+}
 .noto {
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 .amaranth {
   font-family: "Amaranth", sans-serif;
@@ -107,7 +119,6 @@ div.divJack span:hover {
 .tabFontSize {
   font-size: 20px;
 }
-<<<<<<< HEAD
 .something {
 }
 
@@ -162,5 +173,30 @@ input:not(.browser-default):focus:not([readonly]) {
   color: white;
   padding-left: 10px;
 }
-=======
->>>>>>> 44bf3aa7ee0b0942e154e92c687e1ac659644442
+.dropMyStyle {
+  padding: 17px;
+}
+.select-wrapper input.select-dropdown:focus {
+  border-bottom: 2px solid black !important;
+}
+input {
+  font-family: "Montserrat", sans-serif;
+}
+
+.select-wrapper input.select-dropdown {
+  border-bottom: 2px solid black;
+}
+[type="checkbox"]:checked + span:not(.lever):before {
+  border-right: 2px solid #fdd835;
+  border-bottom: 2px solid #fdd835;
+}
+
+.companyCard {
+  font-family: "Slabo 13px", serif;
+  color: black;
+  font-size: 50px;
+}
+.paraCard {
+  font-family: "Concert One", cursive;
+  font-size: 18px;
+}
