@@ -5,6 +5,7 @@ ruby '2.5.3'
 
 gem 'devise'
 gem 'geocoder'
+gem 'rails_12factor'
 
 gem 'cloudinary'
 gem 'rest-client', '~> 2.0'
