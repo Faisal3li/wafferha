@@ -1,18 +1,21 @@
 <h2>Offer Index Page</h2>
 
 <% @offers.each do |offer| %>
-<%= cl_image_tag offer.image%>
+    <%= cl_image_tag offer.image%>
  <p> <%= link_to offer.company.name, offer_path(offer.company) %> </p>
 
 <% end%>
 <%#= link_to("Read more!", offer_path(offer)) %>
-<% if user_signed_in? && current_user.premium %>
-<% @offers.each do |item| %>
-<% if item.coupon  %>
-   <%= cl_image_tag item.image%>
- <p> <%= link_to item.company.name, offer_path(item.company) %> </p>
-<% end %>
+ <%#= irb %>
 
-<% end%>
+<% if user_signed_in? && current_user.premium %>
+    <% @offers.each do |item| %>
+        <% if item.coupon  %>
+            <%= cl_image_tag item.image%>
+            <p> <%= link_to item.company.name, offer_path(item.company) %> </p>
+        <% end%>
+    <% end %>
+<% else  %>
+    <#% redirect_to new_user_session_path %>
 <% end %>
 
