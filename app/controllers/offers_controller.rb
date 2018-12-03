@@ -4,12 +4,17 @@ class OffersController < ApplicationController
   end
 
   def coupon
-    @offers = Offer.where coupon: true
-    render :index
+    if !user_signed_in?
+      redirect_to new_user_session_path
+    else
+      @offers = Offer.where coupon: true
+      render :index
+    end
   end
 
   def show
     @offer = Offer.find_by(id: params[:id])
+    @place = Place.find_by(id: params[:id])
   end
 
   def edit
