@@ -16,14 +16,21 @@
   <body>
   <%#= render partial: "pages/nav" %>
 <nav class="nav-extended yellow darken-1">
-    <div class="nav-wrapper">
+    <div class="nav-wrapper pin-bottom">
       <%= link_to("Wafferha", offers_path, class:"logoWafferha") %>
-      <ul id="nav-mobile" class="right something">
-        <li><%= link_to 'Log In', new_user_session_path, class: "amaranth  blackText tabFontSize" %></li>
-        <li><%= link_to "Sign Up", new_user_registration_path, class: "amaranth  blackText tabFontSize" %></li>
+      <ul id="nav-mobile" class="right">
+      <% if !current_user.nil? %>
+      <li><%= link_to "Veiw Profile", user_path(current_user), class: "kreon  blackText tabFontSize"%></li>
+      <li> <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "kreon  blackText tabFontSize" %></li>
+
+      <% else %>
+      <li><%= link_to "Log in", new_user_session_path, class: "kreon  blackText tabFontSize" %></li>
+      <li><%= link_to "Sign up", new_user_registration_path, class: "kreon  blackText tabFontSize" %></li>
+
+      <% end %>
       </ul>
     </div>
-    <div class="divJack bree tabFontSize">
+    <div class="divJack bree tabFontSize pushpin">
         <%= link_to("Offers", offers_path) %>
         <%= link_to( "Copuns", "/coupons")%>
         <%= link_to("All Companies", companies_path) %>
@@ -62,13 +69,13 @@
       <div class="row">
       <div class="col l6 s12">
       <h5 class="white-text rancho">About Us</h5>            
-      <i><p>WE ARE Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis ab expedita quisquam tenetur libero quaerat asperiores sapiente, tempore vero, iure illo nisi sunt quos beatae reiciendis consectetur sit? Maiores.</p></i>                
+      <i><p class="noto">WE ARE Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem corporis ab expedita quisquam tenetur libero quaerat asperiores sapiente, tempore vero, iure illo nisi sunt quos beatae reiciendis consectetur sit? Maiores.</p></i>                
       </div>
       <div class="col l4 offset-l2 s12">
       <h5 class="white-text rancho">How to find us</h5>
-      <ul>
-      <li>Our GitHub: </li>
-      </ul>
+    
+      <i class="fab fa-github"><a href="https://github.com/MashaelAlmosallam/wafferha" target="_blank" class= "githubFooter jura" >Our GitHub</a></i>
+      
       </div>
       </div>
     </div>

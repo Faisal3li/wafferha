@@ -2,10 +2,13 @@
 
 
 <h2><%= @company.name %></h2>
-
 <p><%= @company.description %></p></br>
-
-<% if current_user && current_user.admin%>
+<% @company.offers.each do |com| %>
+<p>
+<%= com.offer_Description %>
+</p>
+<% end %>
+<% if user_signed_in?  && current_user.admin%>
 <p><%= link_to("Edit Company", edit_company_path(@company)) %></p>
 <p><%= link_to "Delete Company", company_path(@company), method: :delete %></p>
 <%= link_to 'Add New Offer', "../offers/"+@company.id.to_s+"/new"%>

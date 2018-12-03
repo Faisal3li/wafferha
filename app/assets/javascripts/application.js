@@ -12,10 +12,15 @@
 //
 //= require rails-ujs
 //= require activestorage
-//# require turbolinks
+//# require
 //= require_tree .
 
-$(document).on("turbolinks:load", function() {
-  console.log("jquery connected");
-  $("select").formSelect();
-});
+function prepareNav() {
+  var elems = document.querySelectorAll(".pushpin");
+  var instances = M.Pushpin.init(elems, {
+    top: 64
+  });
+}
+
+document.addEventListener("DOMContentLoaded", prepareNav);
+document.addEventListener("turbolinks:load", prepareNav);
