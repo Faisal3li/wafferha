@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_115934) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "company_id"
-    t.string "place_id"
+    t.integer "place_id"
   end
 
   create_table "offers_users", id: false, force: :cascade do |t|
