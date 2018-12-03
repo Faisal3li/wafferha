@@ -9,3 +9,32 @@
 <p><%= link_to "Delete Offer", company_path(@offer), method: :delete %></p>
 <%= link_to 'Add New Offer', "../offers/"+@offer.id.to_s+"/new"%>
 <% end%>
+
+<%#= link_to 'New Place', new_place_path %>
+<%=  content_tag :button, 'Get Places', class: 'btn btn-info get_location'%>
+<%= tag :div, class: 'location_results_list' %>
+
+    <div id="map" style="height:300px;width:300px;margin:0 auto; border: 1px solid black;" ></div>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: -33.856839, lng: 151.215248529039};
+        // <%#= var myLatLng = {lat: <%#= model.latitude  %>, lng: <%#= model.longitude  %>}; %>
+
+        // Create a map object and specify the DOM element
+        // for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          zoom: 4
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONLfaXX_aJGJb8PGsC0ZMwuTqqs6Cifw&callback=initMap"
+        async defer></script>
