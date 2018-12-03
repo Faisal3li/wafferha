@@ -1,9 +1,13 @@
-<h2>Offer Index Page</h2>
 
 <% @offers.each do |offer| %>
+<<<<<<< HEAD
+<div class="row">
+<div class="col s4">
+=======
 <%= cl_image_tag offer.image%>
  <p> <%= link_to offer.company.name, offer_path(offer) %> </p>
 
+>>>>>>> 62647b898233483675abc7b479b386611280505a
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
       <%= cl_image_tag offer.image %>
@@ -12,10 +16,12 @@
       <span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="medium material-icons right">arrow_drop_up</i></span>
       <p class="paraCard"> Offer starts: <%= offer.start_Date %> Offer Expires: <%= offer.expired_Date %></p>
     </div>
-    <div class="card-reveal companyCard">
+    <div class="card-reveal upCard">
       <span class="card-title grey-text text-darken-4"><%= offer.company.name %><i class="medium material-icons right">close</i></span>
       <%= offer.offer_Description %>
     </div>
+  </div>
+  </div>
   </div>
 
 <% end %>
