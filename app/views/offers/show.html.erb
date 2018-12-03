@@ -1,6 +1,11 @@
-<h4><%= @offer.offer_Description %></h4>
-<h2> <%= @offer.company.name %> </h2>
-<p> <%= @offer.image %></p>
-<p> <%= @offer.start_Date %></p>
-<p> <%= @offer.expired_Date %></p>
 
+<h2> <%= @offer.company.name %> </h2>
+<h4><%= @offer.offer_Description %></h4>
+<p> <%= @offer.image %></p>
+<p> Offer starts: <%= @offer.start_Date %> Offer Expires: <%= @offer.expired_Date %></p>
+
+<% if current_user && current_user.admin%>
+<p><%= link_to("Edit Offer", edit_offer_path(@offer)) %></p>
+<p><%= link_to "Delete Offer", company_path(@offer), method: :delete %></p>
+<%= link_to 'Add New Offer', "../offers/"+@offer.id.to_s+"/new"%>
+<% end%>
