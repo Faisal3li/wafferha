@@ -1,6 +1,11 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.all
+    @offers = Offer.where coupon: false
+  end
+
+  def coupon
+    @offers = Offer.where coupon: true
+    render :index
   end
 
   def show
@@ -15,8 +20,10 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.create(offer_params)
-    @offer.save
+    offer = Offer.create(offer_params)
+
+    offer.save
+
     redirect_to offers_path
   end
 

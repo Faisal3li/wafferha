@@ -9,15 +9,21 @@
 <%= form.label :description %>
 <%= form.text_area :description%>
 </div>
-<br>
+<br> 
 <div>
   <%= form.label "Image" %>
   <%= form.file_field :image %>
 </div>
-<%#= form.label  "Choose a Category" %>
+<%= form.label  "Choose a Category" %>
 </br>
-<%#= form.collection_select (:company, :category_id, Category.all, :id, :name) %>
+<%= form.collection_select :category_id, Category.all.collect, :id, :name, prompt: true %>
 <%= form.submit "Add Company"  %>
 <% end%>
 
 <% end %>
+
+<script>
+  window.onload = ()=>{
+      $('select').formSelect();
+  };
+</script>

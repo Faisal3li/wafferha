@@ -21,10 +21,19 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+<<<<<<< HEAD
   <div class="field container">
     <%#= f.label :user_type, class: "profile-btn btn yellow darken-1 z-depth-1" %><br />
     <%#= f.select :user_type, ["Admin", "Customer"] %>
   </div>
+=======
+  <div class="field">
+      <%= f.label :premium do %>
+        <%= f.check_box :premium %>
+        <span>Premium</span>
+      <% end %>
+    </div>
+>>>>>>> 44bf3aa7ee0b0942e154e92c687e1ac659644442
 
   <div class="actions">
     <%= f.submit "Sign up", class: "profile-btn btn yellow darken-1 z-depth-1" %>

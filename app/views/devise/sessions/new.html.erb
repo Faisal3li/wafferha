@@ -13,8 +13,18 @@
 
   <% if devise_mapping.rememberable? -%>
     <div class="field">
+<<<<<<< HEAD
       <%= f.check_box :remember_me%>
       <%= f.label :remember_me, class:"juratab indeterminate-checkbox" %>
+=======
+
+
+    <%= f.label :remember_me do %>
+        <%= f.check_box :remember_me %>
+        <span>Remember Me</span>
+      <% end %>
+
+>>>>>>> 44bf3aa7ee0b0942e154e92c687e1ac659644442
     </div>
   <% end -%>
 

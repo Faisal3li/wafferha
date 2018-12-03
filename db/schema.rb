@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 2018_12_02_070028) do
     t.string "image"
     t.string "coLocation"
     t.integer "view_Count"
-    t.string "coupon"
+    t.boolean "coupon", default: false
     t.boolean "used"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

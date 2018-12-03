@@ -1,29 +1,37 @@
 <% if current_user && current_user.admin%>
-<%= form_for @offer do |form| %>
-<%# if user_signed_in? && current_user.admin_id%>
-<div>
+  <%= form_for @offer do |form| %>
+    <%# if user_signed_in? && current_user.admin_id%>
+    <div>
 
-    <%= hidden_field_tag "offer[company_id]", params[:id]%>
+      <%= hidden_field_tag "offer[company_id]", params[:id]%>
 
-<%= form.label :offer_Description, "Describe the Offer" %>
-<%= form.text_area :offer_Description%>
-<br>
-<%= form.label :start_Date, "Enter the Start date." %>
-<%= form.date_field :start_Date %>
-<br>
-<%= form.label :expired_Date, "Enter the expired date." %>
-<%= form.date_field :expired_Date %>
-<br>
+      <%= form.label :offer_Description, "Describe the Offer" %>
+      <%= form.text_area :offer_Description%>
+      <br>
+      <%= form.label :start_Date, "Enter the Start date." %>
+      <%= form.date_field :start_Date %>
+      <br>
+      <%= form.label :expired_Date, "Enter the expired date." %>
+      <%= form.date_field :expired_Date %>
+      <br>
 
-<%= form.label :coLocation, "location." %>
-<%= form.text_field :coLocation %>
-<br>
-<%= form.label  :coupon, "coupon?" %>
-<%= form.check_box :coupon %>
-<br>
-  <%= form.label "Image" %>
-  <%= form.file_field :image %>
-</div>
-<%= form.submit "Add offer"  %>
-<% end%>
+      <%= form.label :coLocation, "location." %>
+      <%= form.text_field :coLocation %>
+      <br>
+      <%= form.label  :coupon do %>
+        <%= form.check_box :coupon  %>
+        <span>Coupon ?</span>
+      <% end %>
+      <br>
+      <%= form.label "Image" %>
+      <%= form.file_field :image %>
+    </div>
+    <%= form.submit "Add offer"  %>
+  <% end%>
 <% end %>
+
+<script>
+  window.onload = ()=>{
+      $('select').formSelect();
+  };
+</script>
