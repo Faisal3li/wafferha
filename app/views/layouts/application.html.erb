@@ -4,14 +4,13 @@
     <title>Wafferha</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%#= favicon_link_tag 'Wafferha.png' %>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Baloo|Jura:700|Megrim|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/css?family=Amaranth|Baloo|Bree+Serif|Jura:700|Kreon|Megrim|Modak|Oleo+Script+Swash+Caps|Rancho" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
   <body>
@@ -26,18 +25,22 @@
     </div>
     <div class="divJack bree tabFontSize">
         <%= link_to("Offers", offers_path) %>
-        <%= link_to( "Copuns", offers_path)%>
+        <%= link_to( "Copuns", "/coupons")%>
         <%= link_to("All Companies", companies_path) %>
     </div>
   </nav>
-<nav>
-<% if user_signed_in? %>
-  <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-<% else %>
-  <%= link_to 'Log in', new_user_session_path %>
-  <%= link_to "Sign Up", new_user_registration_path %>
-<% end %>
-</nav>
+
+
+<%# <nav>
+<%# if user_signed_in? %>
+  <%#= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<%# else %>
+  <%#= link_to 'Log in', new_user_session_path %>
+  <%#= link_to "Sign Up", new_user_registration_path %>
+<%# end %>
+<%# </nav>  %>
+
+
 
 <%= form_tag "/category_search", method: "GET", id: "form" do %>
   <%= collection_select(

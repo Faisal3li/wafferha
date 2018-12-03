@@ -1,6 +1,11 @@
 class OffersController < ApplicationController
   def index
-    @offers = Offer.all
+    @offers = Offer.where coupon: false
+  end
+
+  def coupon
+    @offers = Offer.where coupon: true
+    render :index
   end
 
   def show

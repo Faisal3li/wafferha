@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root "pages#home"
   #root "offers#index"
+  get "/coupons", to: "offers#coupon"
   devise_for :users
   resources :companies, :offers, :users
   resources :categories, only: [:show]

@@ -22,8 +22,10 @@
   </div>
 
   <div class="field">
-      <%= f.check_box :premium %>
-      <%= f.label :premium %>
+      <%= f.label :premium do %>
+        <%= f.check_box :premium %>
+        <span>Premium</span>
+      <% end %>
     </div>
 
   <div class="actions">
