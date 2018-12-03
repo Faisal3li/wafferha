@@ -4,7 +4,7 @@
 <%= @offer.image %>
 <p class="concertFont"> Offer starts: <%= @offer.start_Date %> Offer Expires: <%= @offer.expired_Date %></p>
 
-<% if current_user && current_user.admin%>
+<% if user_signed_in?  && current_user.admin%>
 <p><%= link_to("Edit Offer", edit_offer_path(@offer)) %></p>
 <p><%= link_to "Delete Offer", company_path(@offer), method: :delete %></p>
 <%= link_to 'Add New Offer', "../offers/"+@offer.id.to_s+"/new"%>
