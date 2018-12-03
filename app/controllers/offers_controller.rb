@@ -14,6 +14,7 @@ class OffersController < ApplicationController
 
   def show
     @offer = Offer.find_by(id: params[:id])
+    @place = Place.find_by(id: params[:id])
   end
 
   def edit

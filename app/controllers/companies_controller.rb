@@ -45,6 +45,6 @@ class CompaniesController < ApplicationController
   private
 
   def company_params
-    params.require(:company).permit(:name, :description, :image, :category_id => [])
+    params.require(:company).permit(:name, :description, :image, :address, :latitude, :longitude, :category_id => [])
   end
 end
