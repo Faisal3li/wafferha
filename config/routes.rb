@@ -5,8 +5,6 @@ Rails.application.routes.draw do
   resources :companies, :offers, :users
   resources :categories, only: [:show]
   get "/offers/:id/new", to: "offers#new"
-
-  get "/search", to: "companies#search", as: "search_page"
   get "/companies/:id/offers/new", to: "offers#new"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get "/category_search", to: "companies#index"
 end

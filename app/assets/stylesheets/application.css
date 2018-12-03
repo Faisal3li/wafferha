@@ -17,10 +17,10 @@ body {
   font-family: "Jura", sans-serif;
 }
 .amaranth {
-  font-family: 'Amaranth', sans-serif;
+  font-family: "Amaranth", sans-serif;
 }
 .kreon {
-  font-family: 'Kreon', serif;
+  font-family: "Kreon", serif;
 }
 .bree {
   font-family: "Bree Serif", serif;
@@ -104,4 +104,3 @@ div.divJack span:hover {
 .tabFontSize {
   font-size: 20px;
 }
-
