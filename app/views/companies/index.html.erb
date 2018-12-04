@@ -16,5 +16,10 @@
 <% end %>
 
 <% if user_signed_in?  && current_user.admin%>
+<<<<<<< HEAD
+<%= link_to 'Add New Company', "/companies/new"%>
+ <% end %>
+=======
 <%= link_to 'Add New Company', "../companies/"+@company.id.to_s+"/new"%>
  <% end %>
+>>>>>>> f4ab8d818108e0f724ccb1ccacc8f7f2e9bff728

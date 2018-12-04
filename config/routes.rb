@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   get 'places/show'
-  root "pages#home"
+  root "offers#index"
   #root "offers#index"
   get "/coupons", to: "offers#coupon"
   devise_for :users
