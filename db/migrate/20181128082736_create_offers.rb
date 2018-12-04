@@ -2,8 +2,8 @@ class CreateOffers < ActiveRecord::Migration[5.2]
   def change
     create_table :offers do |t|
       t.text :offer_Description
-      t.datetime :expired_Date
-      t.datetime :start_Date
+      t.date :expired_Date
+      t.date :start_Date
       t.string :image
       t.string :coLocation
       t.integer :view_Count
