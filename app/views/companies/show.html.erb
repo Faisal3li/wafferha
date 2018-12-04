@@ -7,7 +7,7 @@
 <div class="col s4">
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
-      <%= cl_image_tag offer.image %>
+      <%= cl_image_tag offer.image, class:"imgSize" %>
     </div>
     <div class="card-content">
       <span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="medium material-icons right">arrow_drop_up</i></span>
@@ -20,7 +20,7 @@
   </div>
   </div>
   </div>
-  <% end%>
+<% end%>
 
 
 <% if user_signed_in?  && current_user.admin%>
