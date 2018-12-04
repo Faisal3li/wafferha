@@ -1,28 +1,49 @@
 
 <h2 class="headermonts"><%= @company.name %></h2>
 <p class="bodymonts"><%= @company.description %></p></br>
+<div id="map" style="height:300px;width:700px;margin:0 auto; border: 1px solid black;"></div>
+                        <script>
+                            function initMap() {
+                            var myLatLng = {lat: <%= @company.latitude %>,lng: <%= @company.longitude %>};
+    
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                center: myLatLng,
+                                zoom: 4
+                            });
 
+
+                            var marker = new google.maps.Marker({
+                                map: map,
+                                position: myLatLng,
+                                title: 'Hello World!'
+                            });
+                            }
+                        </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONLfaXX_aJGJb8PGsC0ZMwuTqqs6Cifw&callback=initMap" async defer>
+                    </script>
+<h4 class="headermonts paddingTop">Offers</h4>
+  <div class="row paddingTop">
 <% @company.offers.each do |offer| %>
-<div class="row">
-<div class="col s4">
-  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <%= cl_image_tag offer.image %>
-    </div>
-    <div class="card-content">
-    <span class="card-title activator grey-text text-darken-4 "><i class="small material-icons right">arrow_drop_up</i></span>
-      <p class="paraCard"> Offer starts: <%= offer.start_Date %></p>
-      <p class="paraCard"> Offer Expires: <%= offer.expired_Date %></p>
-    </div>
-    <div class="card-reveal upCard">
-      <span class="card-title grey-text text-darken-4"><%= offer.company.name %><i class="small material-icons right">close</i></span>
-      <%= offer.offer_Description %>
-    </div>
-  </div>
-  </div>
-  </div>
-  <% end%>
+    <div class="col s6">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <%= cl_image_tag offer.image, class:"imgSize" %>
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4 "><i class="small material-icons right">arrow_drop_up</i></span>
+                <p class="paraCard"> Offer starts: <%= offer.start_Date %></p>
+                <p class="paraCard"> Offer Expires: <%= offer.expired_Date %></p>
+            </div>
+            
+            <div class="card-reveal upCard">
+            <span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="small material-icons right">close</i></span>
+                    <p class="concertFont"><%= offer.offer_Description %></p> 
+            </div>
 
+            </div>
+          </div>
+<% end %>
+</div>
 
 <% if user_signed_in?  && current_user.admin%>
 <p><%= link_to("Edit Company", edit_company_path(@company)) %></p>

@@ -6,41 +6,7 @@
         <img class="activator" src='<%= @offer.image %>'>
       </div>
 
-      <div class="card-content">
-        <span class="card-title activator "><%= @offer.company.name %></span>
-      </div>
-
-      <div class="card-reveal">
-        <p class="concertFont"><%= @offer.offer_Description %></p>
-        <p class="paraCard"> Offer starts: <%= @offer.start_Date %></p>
-        <p class="paraCard"> Offer Expires: <%= @offer.expired_Date %></p> 
-
-
-        <div id="map" style="height:300px;width:300px;margin:0 auto; border: 1px solid black;" ></div>
-          <script>
-            function initMap() {
-              var myLatLng = {lat: <%= @offer.company.latitude %>,lng: <%= @offer.company.longitude %>};
-              // <%#= var myLatLng = {lat: <%#= model.latitude  %>, lng: <%#= model.longitude  %>}; %>
-
-              // Create a map object and specify the DOM elementc
-              // for display.
-              var map = new google.maps.Map(document.getElementById('map'), {
-                center: myLatLng,
-                zoom: 4
-              });
-
-              // Create a marker and set its position.
-              var marker = new google.maps.Marker({
-                map: map,
-                position: myLatLng,
-                title: 'Hello World!'
-              });
-            }
-
-          </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONLfaXX_aJGJb8PGsC0ZMwuTqqs6Cifw&callback=initMap"
-              async defer>
-          </script>
+     
       </div>
 
       <div class="card-action cli">

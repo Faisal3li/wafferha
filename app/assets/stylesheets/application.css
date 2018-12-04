@@ -216,3 +216,9 @@ input {
   font-size: 30px;
 }
 
+.imgSize{
+  height: 250px;
+}
+.paddingTop{
+  padding-top: 50px;
+}
