@@ -2,14 +2,16 @@
 <% @offers.each do |offer| %>
 <div class="row">
 <div class="col s4">
-
+<%= cl_image_tag offer.image%>
+ <p> <%= link_to offer.company.name, offer_path(offer) %> </p>
 
   <div class="card">
     <div class="card-image waves-effect waves-block waves-light">
       <%= cl_image_tag offer.image %>
     </div>
     <div class="card-content">
-<span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="small material-icons right">arrow_drop_up</i></span>      <p class="paraCard"> Offer starts: <%= offer.start_Date %> Offer Expires: <%= offer.expired_Date %></p>
+      <span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="medium material-icons right">arrow_drop_up</i></span>
+      <p class="paraCard"> Offer starts: <%= offer.start_Date %> Offer Expires: <%= offer.expired_Date %></p>
     </div>
     <div class="card-reveal upCard">
       <span class="card-title grey-text text-darken-4"><%= offer.company.name %><i class="medium material-icons right">close</i></span>
@@ -22,22 +24,12 @@
 <% end %>
 
 <%#= link_to("Read more!", offer_path(offer)) %>
-<%# if user_signed_in? && current_user.premium %>
-<%# @offers.each do |item| %>
-<%# if item.coupon  %>
-   <%#= cl_image_tag item.image%>
- <%#= link_to item.company.name, offer_path(item) %>
-<%# end %>
-<%# end%>
-<%# end%>
 <% if user_signed_in? && current_user.premium %>
-    <% @offers.each do |item| %>
-        <% if item.coupon  %>
-            <%= cl_image_tag item.image%>
-            <p> <%= link_to item.company.name, offer_path(item.company) %> </p>
-        <% end%>
-    <% end %>
-<% else  %>
-    <%# redirect_to new_user_session_path %>
+<% @offers.each do |item| %>
+<% if item.coupon  %>
+   <%= cl_image_tag item.image%>
+ <p> <%= link_to item.company.name, offer_path(item) %> </p>
 <% end %>
+<% end%>
+<% end%>
 
