@@ -22,13 +22,8 @@
                     <% end%>
                 </div>
                 <div class="card-reveal upCard">
-                        <span class="card-title grey-text text-darken-4"><%= offer.company.name %><i class="small material-icons right">close</i></span>
                         <p class="concertFont"><%= offer.offer_Description %></p>
-                        <p class="paraCard"> Offer starts: <%= offer.start_Date %></p>
-                        <p class="paraCard"> Offer Expires: <%= offer.expired_Date %></p> 
-
-
-                    <div id="map" style="height:300px;width:300px;margin:0 auto; border: 1px solid black;" ></div>
+                    <div id="map" style="height:300px;width:300px;margin:0 auto; border: 1px solid black;></div>
                         <script>
                             function initMap() {
                             var myLatLng = {lat: <%= offer.company.latitude %>,lng: <%= offer.company.longitude %>};
@@ -53,11 +48,12 @@
                         async defer>
                     </script>
                 </div>
-                
+                </div>
             </div>
         </div>
-    </div>
+    
 <% end %>
+    </div>
 
 <%#= link_to("Read more!", offer_path(offer)) %>
 <% if user_signed_in? && current_user.premium %>
