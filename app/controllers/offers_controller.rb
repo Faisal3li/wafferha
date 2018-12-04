@@ -6,6 +6,8 @@ class OffersController < ApplicationController
   def coupon
     if !user_signed_in?
       redirect_to new_user_session_path
+    elsif !current_user.premium
+      render :coupon
     else
       @offers = Offer.where coupon: true
       render :index
