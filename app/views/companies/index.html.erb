@@ -1,19 +1,20 @@
-<% @companies.each do |co| %>
- <div class="row">
+<div class="cardSizee">
+<div class="row cardSizee">
+ <% @companies.each do |co| %>
     <div class="col s4">
       <div class="card">
       <div class="card-image">
-<%= cl_image_tag co.image %>
+<%= cl_image_tag co.image, class:"imgSize"%>
       </div>
       
         <div class="card-action">
-         <%= link_to "Check offers!", company_path(co)%>
+           <%= link_to "Check offers!", company_path(co), class:"checkoffers"%>
         </div>
       </div>
     </div>
+    <% end%>
   </div>
-
-<% end %>
+  </div>
 
 <% if user_signed_in?  && current_user.admin%>
 <%= link_to 'Add New Company', "/companies/new"%>
