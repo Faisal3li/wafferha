@@ -1,1 +1,7 @@
-<%= render partial: 'form' %> 
+<h3>Add a offer</h3>
+
+<% if user_signed_in?  && current_user.admin%>
+ <%= render partial: "form" %> 
+<%#= link_to 'new', new_company_path(@company) %>
+
+<% end%>

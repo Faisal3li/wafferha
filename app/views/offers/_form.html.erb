@@ -24,8 +24,12 @@
       <br>
       <%= form.label "Image" %>
       <%= form.file_field :image %>
-    </div>
-    <%= form.submit "Add offer"  %>
+    </div><br>
+      <% if @offer.id %>
+            <%= form.submit "Edit Offer" %>
+        <% else %>
+            <%= form.submit "Add Offer" %>
+        <% end %>
   <% end%>
 <% end %>
 

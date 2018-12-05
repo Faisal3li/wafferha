@@ -3,7 +3,7 @@ Category.destroy_all
 Company.destroy_all
 Offer.destroy_all
 
-User.create(name: "admin", username: "admin", email: "admin@example.com", password: "123456", password_confirmation: "123456", admin: "true")
+User.create(name: "admin", username: "admin", email: "admin@example.com", password: "123456", password_confirmation: "123456", admin: "true", premium:"true")
 
 categories = ["Entertainment", "Resturant", "Fashion Retailers", "Health Care"]
 

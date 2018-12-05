@@ -28,7 +28,11 @@
 <%= form.label  "Choose a Category" %>
 </br>
 <%= form.collection_select :category_id, Category.all.collect, :id, :name, prompt: true %>
-<%= form.submit "Add Company"  %>
+        <% if @company.id %>
+            <%= form.submit "Edit Company" %>
+        <% else %>
+            <%= form.submit "Add Company" %>
+        <% end %>
 <% end%>
 
 <% end %>
