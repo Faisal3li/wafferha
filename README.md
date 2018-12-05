@@ -1,25 +1,27 @@
 # Wafferh
 Wafferha is a dedicated website for users who wish to shop at the right place, providing the most recent and luring offers. Our aim is devoted to distress our users from fake and out-dated offers.
-![Tracheff](https://image.ibb.co/ib6yVL/Screen-Shot-2018-11-14-at-10-26-14-AM.png)
+<br/>
+<br/>
+![Wafferha](https://i.ibb.co/TLdb34L/Wafferha.png)
 
 ## Description of Tech
 - [Ruby on Rails](https://guides.rubyonrails.org/getting_started.html)
 - [jQuery](https://code.jquery.com/)
-- [Google Fonts](https://fonts.google.com/)
+- [Heroku](https://dashboard.heroku.com/apps)
+- [Cloudinary](https://cloudinary.com/)
+- [Geocoder](https://developer.here.com/signup/geocoding?cid=Geocoding-Google-MM-T4-Dev-Generic-E&utm_source=Google&utm_medium=ppc&utm_campaign=Dev_PaidSearch_DevPortal_AlwaysOn)
 
 ## Thought Process
-At first, I drew the structure of my models, also showing an adaptive association with each other. I assembled well order links to my models to provide the user with a trouble-free experience. Secondly, I thought of ways of how the website would work, assigning suiteable names to elements, and then how to connect each part to it's necessary other. Finally I would then practice ways to make my code neater and more understandable.
+At first, We drew the structure of our models, also showing an adaptive association with each other. We assembled well order links to our models to provide the user with a trouble-free experience. Secondly, We thought of ways of how the website would work, assigning suiteable names to elements, and then how to connect each part to it's necessary other. Finally We would then practice ways to make our code neater and more understandable.
 
-## Unsolved Problems
-I would really love to finish my website with a few more quirks like: Add types to posts, add comments and likes, meet-ups near your loacl gym where a session might happen with a trainer, date of posts, friend request, private messaging, and use Heroku also cloudinary. 
+## What's next?
+We would really love to use Stripe or Paypal APIs to diffrentiate our premium users more deceptively. 
 
 ## Credits
 - Jack Jeffress
+- Kane
 - Moath Althawad
-- Alanoud
-- Ali S
-- Sultan Al-Samaani
-- Sami
-- Mashael
-- Leana
+- Jafar A (3amigos)
+- Alanoud R (3amigos)
+- Ali S (3 amigos)
 - Class of WDI!!
