@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 2018_12_04_132621) do
 
   create_table "offers", force: :cascade do |t|
     t.text "offer_Description"
-    t.date "expired_Date"
-    t.date "start_Date"
+    t.datetime "expired_Date"
+    t.datetime "start_Date"
     t.string "image"
     t.string "coLocation"
     t.integer "view_Count"
