@@ -6,14 +6,13 @@
                 <%= cl_image_tag offer.image, class:"imgSize" %>
             </div>
             <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4 "><i class="small material-icons right">arrow_drop_up</i></span>
-                <p class="paraCard"> Offer starts: <%= offer.start_Date %></p>
-                <p class="paraCard"> Offer Expires: <%= offer.expired_Date %></p>
-            </div>
-            
-            <div class="card-action">
-                <p id="offer-<%= offer.id%>"> Views: <%= offer.views.length %></p>
-            </div>
+                    <span class="card-title activator grey-text text-darken-4 "><i class="small material-icons right arrow" data-id="<%=offer.id %>">arrow_drop_up</i></span>
+                    <p class="paraCard"> Offer starts: <%= offer.start_Date %></p>
+                    <p class="paraCard"> Offer Expires: <%= offer.expired_Date %></p>
+                </div>
+                <div class="card-action">
+                 <p id="offer-<%= offer.id%>"> Views: <%= offer.views.length %></p>
+                </div>
             
             <div class="card-reveal upCard">
             <span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="small material-icons right">close</i></span>
@@ -24,26 +23,6 @@
           </div>
 <% end %>
 </div>
-<%#= link_to("Read more!", offer_path(offer)) %>
-<% if user_signed_in? && current_user.premium %>
-    <% @offers.each do |item| %>
-        <% if item.coupon  %>
-            <%= cl_image_tag item.image%>
-            <p> <%= link_to item.company.name, offer_path(item) %> </p>
-        <% end %>
-    <% end%>
-<% end%>
-
-<% if user_signed_in? && current_user.premium %>
-    <% @offers.each do |item| %>
-        <% if item.coupon  %>
-            <%= cl_image_tag item.image%>
-            <p> <%= link_to item.company.name, offer_path(item.company) %> </p>
-        <% end%>
-    <% end %>
-    <% else  %>
-    <%# redirect_to new_user_session_path %>
-<% end %>
 
 <% if user_signed_in? %>
     <script>
@@ -66,9 +45,9 @@
             })
             .then(resp => resp.json())
             .then(data => { 
-               console.log(data.offer.view.length);
-                const ul = document.querySelector(`#offer-${data.offer_id}`);
-                const html = "Views: " ;
+               //console.log(data);
+                const ul = document.querySelector(`#offer-${offer_id}`);
+                const html = "Views: " + data;
                 ul.innerHTML = html;
             })
            
