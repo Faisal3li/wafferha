@@ -1,5 +1,7 @@
 # Wafferh
 Wafferha is a dedicated website for users who wish to shop at the right place, providing the most recent and luring offers. Our aim is devoted to distress our users from fake and out-dated offers.
+<br/>
+<br/>
 ![Wafferha](https://i.ibb.co/TLdb34L/Wafferha.png)
 
 ## Description of Tech
