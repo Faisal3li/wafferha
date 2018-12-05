@@ -216,10 +216,10 @@ input {
   font-size: 30px;
 }
 
-.imgSize{
+.imgSize {
   height: 250px;
 }
-.paddingTop{
+.paddingTop {
   padding-top: 50px;
 }
 
@@ -230,4 +230,8 @@ input {
   padding: 1px 30px;
   color: #ecc619;
   font-size: 16px;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 89f1846c46cb3505beece3cf1c610164d10802bb

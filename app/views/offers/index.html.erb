@@ -11,10 +11,16 @@
                     <p class="paraCard"> Offer Expires: <%= offer.expired_Date %></p>
                 </div>
                 <div class="card-action">
+<<<<<<< HEAD
                  <%#= link_to "Read more", offer_path(offer) %>
                  <p id="offer-<%= offer.id%>"> Views: <%= offer.views.length %></p>
                  
                 </div>
+=======
+                 <p id="offer-<%= offer.id%>"> Views: <%= offer.views.length %></p>
+                </div>
+            
+>>>>>>> 89f1846c46cb3505beece3cf1c610164d10802bb
             <div class="card-reveal upCard">
             <span class="card-title activator grey-text text-darken-4 "><%= link_to offer.company.name, company_path(offer.company),class:"companyCard" %><i class="small material-icons right">close</i></span>
                     <p class="concertFont"><%= offer.offer_Description %></p> 
@@ -46,7 +52,11 @@
             })
             .then(resp => resp.json())
             .then(data => { 
+<<<<<<< HEAD
                console.log(data);
+=======
+               //console.log(data);
+>>>>>>> 89f1846c46cb3505beece3cf1c610164d10802bb
                 const ul = document.querySelector(`#offer-${offer_id}`);
                 const html = "Views: " + data;
                 ul.innerHTML = html;
