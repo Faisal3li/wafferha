@@ -17,8 +17,9 @@
         <p class="paraCard"> Offer Expires: <%= @offer.expired_Date %></p> 
 
 
-        <div id="map" style="height:300px;width:300px;margin:0 auto; border: 1px solid black;" ></div>
-          <script>
+        <div id="map" style="height:300px;width:300px;margin:0 auto; border: 1px solid black;" >
+        </div>
+        <script>
             function initMap() {
               var myLatLng = {lat: <%= @offer.company.latitude %>,lng: <%= @offer.company.longitude %>};
               // <%#= var myLatLng = {lat: <%#= model.latitude  %>, lng: <%#= model.longitude  %>}; %>
@@ -38,10 +39,10 @@
               });
             }
 
-          </script>
-          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONLfaXX_aJGJb8PGsC0ZMwuTqqs6Cifw&callback=initMap"
+        </script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAONLfaXX_aJGJb8PGsC0ZMwuTqqs6Cifw&callback=initMap"
               async defer>
-          </script>
+        </script>
       </div>
 
       <div class="card-action cli">

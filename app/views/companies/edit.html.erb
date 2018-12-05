@@ -1,6 +1,6 @@
-<h1>Edit Company</h1>
+<h3>Edit Company</h3>
 <% if user_signed_in?  && current_user.admin%>
  <%= render partial: "form" %> 
-<%= link_to 'Edit', edit_company_path(@company) %>
+<%# <%= link_to 'Edit', edit_company_path(@company) %> 
 
 <% end%>

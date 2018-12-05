@@ -2,7 +2,7 @@
   <%= form_for @offer do |form| %>
     <div>
 
-      <%= hidden_field_tag "offer[company_id]", params[:id]%>
+      <%#= hidden_field_tag "offer[company_id]", params[:id]%>
 
       <%= form.label :offer_Description, "Describe the Offer" %>
       <%= form.text_area :offer_Description%>
@@ -24,8 +24,12 @@
       <br>
       <%= form.label "Image" %>
       <%= form.file_field :image %>
-    </div>
-    <%= form.submit "Add offer"  %>
+    </div><br>
+      <% if @offer.id %>
+            <%= form.submit "Edit Offer" %>
+        <% else %>
+            <%= form.submit "Add Offer" %>
+        <% end %>
   <% end%>
 <% end %>
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :views
+  get 'views/create'
   get 'places/show'
   root "offers#index"
   #root "offers#index"

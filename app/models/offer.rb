@@ -1,6 +1,6 @@
 class Offer < ApplicationRecord
   has_one :place
   belongs_to :company
-  # belongs_to :category
+  has_many :views
   mount_uploader :image, ImageUploader
 end
